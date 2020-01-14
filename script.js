@@ -1,10 +1,10 @@
 
 var punteggio = 0;
 var controllo;
-numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
-while (numeroUtente < 1 || numeroUtente > 100) {
-  numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"))
-}
+// numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
+// while (numeroUtente < 1 || numeroUtente > 100) {
+//   numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"))
+// }
 // creazione nuermi random
 var listaNumeriPc =[23,];
 for (var i = 0; i <16; i++) {
@@ -26,4 +26,13 @@ function comparazione(lista,numero) {
       return false
     }
   }
+}
+for (var i = 0; i < 10; i++) {
+    numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
+    controllo = comparazione(listaNumeriPc,numeroUtente);
+    console.log(controllo);
+    if (controllo == true) {
+      alert("hai perso" + punteggio)
+      break;
+    }
 }
