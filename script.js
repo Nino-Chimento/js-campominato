@@ -34,11 +34,13 @@ for (var i = 0; i < 84; i++) {
     controllo = comparazione(listaNumeriPc,numeroUtente);
     console.log(controllo);
     if (controllo == true) {
-      alert("hai perso" + punteggio)
+      alert("hai perso" + punteggio);
       i = 84
+    }
+    else if (punteggio == 84) {
+      alert("secondo me hai barato ma hai vinto!!!")
     }
     else {
       punteggio++
-      possibilita++
     }
-}
+  }
