@@ -34,7 +34,7 @@ for (var i = 0; i < 84; i++) {
     console.log(controllo);
     if (controllo == true) {
       alert("hai perso" + punteggio)
-      break;
+      i = 84
     }
     else {
       punteggio++
