@@ -1,16 +1,37 @@
-var difficolta = 0
+var difficolta = parseInt(prompt("inserisci un numero da 0 a 2"))
 var punteggio = 0;
 var controllo;
 var possibilita = 0;
 var numeroUtente;
-
-// creazione nuermi random
 var listaNumeriPc =[23,];
-for (var i = 0; i <16; i++) {
-  numeroCreato = getRandomInt(1,100);
-  listaNumeriPc.push(numeroCreato)
-  }
-  console.log(listaNumeriPc);
+// creazione nuermi random
+if (difficolta == 0) {
+  for (var i = 0; i <16; i++) {
+    numeroCreato = getRandomInt(1,100);
+    listaNumeriPc.push(numeroCreato)
+    }
+    console.log(listaNumeriPc);
+    for (var i = 0; i < 84; i++) {
+        numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
+        while (numeroUtente < 1 || numeroUtente > 100) {
+          numeroUtente = parseInt(prompt("devi inserire un numero da 1 a 100"))
+        }
+        controllo = comparazione(listaNumeriPc,numeroUtente);
+        console.log(controllo);
+        if (controllo == true) {
+          alert("hai perso" + punteggio);
+          i = 84
+        }
+        else if (punteggio == 84) {
+          alert("secondo me hai barato ma hai vinto!!!")
+        }
+        else {
+          punteggio++
+        }
+      }
+}
+
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -26,21 +47,3 @@ function comparazione(lista,numero) {
     }
   }
 }
-for (var i = 0; i < 84; i++) {
-    numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
-    while (numeroUtente < 1 || numeroUtente > 100) {
-      numeroUtente = parseInt(prompt("devi inserire un numero da 1 a 100"))
-    }
-    controllo = comparazione(listaNumeriPc,numeroUtente);
-    console.log(controllo);
-    if (controllo == true) {
-      alert("hai perso" + punteggio);
-      i = 84
-    }
-    else if (punteggio == 84) {
-      alert("secondo me hai barato ma hai vinto!!!")
-    }
-    else {
-      punteggio++
-    }
-  }
