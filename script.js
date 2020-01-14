@@ -1,4 +1,4 @@
-
+var difficolta = 0
 var punteggio = 0;
 var controllo;
 var possibilita = 0;
@@ -42,5 +42,3 @@ for (var i = 0; i < 84; i++) {
       possibilita++
     }
 }
-console.log(punteggio);
-console.log(possibilita);
