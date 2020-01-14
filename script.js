@@ -25,6 +25,9 @@ function comparazione(lista,numero) {
     if (lista[i]==numero) {
       return true
     }
+    else {
+      return false
+    }
   }
 }
 controllo = comparazione(listaNumeriPc,numeroUtente);
