@@ -54,6 +54,30 @@ else if (difficolta == 1) {
           punteggio++
         }
       }
+}else if (difficolta == 2) {
+  for (var i = 0; i <16; i++) {
+    numeroCreato = getRandomInt(1,50);
+    listaNumeriPc.push(numeroCreato)
+    }
+    console.log(listaNumeriPc);
+    for (var i = 0; i < 34; i++) {
+        numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 50"));
+        while (numeroUtente < 1 || numeroUtente > 50) {
+          numeroUtente = parseInt(prompt("devi inserire un numero da 1 a 50"))
+        }
+        controllo = comparazione(listaNumeriPc,numeroUtente);
+        console.log(controllo);
+        if (controllo == true) {
+          alert("hai perso il tuo punteggio e'"+" " + punteggio);
+          i = 34
+        }
+        else if (punteggio == 34) {
+          alert("secondo me hai barato ma hai vinto!!!")
+        }
+        else {
+          punteggio++
+        }
+      }
 }
 
 
