@@ -2,10 +2,8 @@
 var punteggio = 0;
 var controllo;
 var possibilita = 0;
-// numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
-// while (numeroUtente < 1 || numeroUtente > 100) {
-//   numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"))
-// }
+var numeroUtente;
+
 // creazione nuermi random
 var listaNumeriPc =[23,];
 for (var i = 0; i <16; i++) {
@@ -30,6 +28,9 @@ function comparazione(lista,numero) {
 }
 for (var i = 0; i < 84; i++) {
     numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
+    while (numeroUtente < 1 || numeroUtente > 100) {
+      numeroUtente = parseInt(prompt("devi inserire un numero da 1 a 100"))
+    }
     controllo = comparazione(listaNumeriPc,numeroUtente);
     console.log(controllo);
     if (controllo == true) {
