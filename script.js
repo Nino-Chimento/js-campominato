@@ -1,4 +1,7 @@
-var difficolta = parseInt(prompt("inserisci un numero da 0 a 2"))
+var difficolta = parseInt(prompt("inserisci un numero da 0 a 2"));
+while (difficolta < 0 || difficolta >2) {
+  difficolta = parseInt(prompt("inserisci un numero da 0 a 2"));
+}
 var punteggio = 0;
 var controllo;
 var possibilita = 0;
