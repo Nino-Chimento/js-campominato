@@ -1,6 +1,7 @@
 
 var punteggio = 0;
 var controllo;
+var possibilita = 0;
 // numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
 // while (numeroUtente < 1 || numeroUtente > 100) {
 //   numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"))
@@ -37,5 +38,8 @@ for (var i = 0; i < 10; i++) {
     }
     else {
       punteggio++
+      possibilita++
     }
 }
+console.log(punteggio);
+console.log(possibilita);
