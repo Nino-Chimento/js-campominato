@@ -28,7 +28,7 @@ function comparazione(lista,numero) {
     }
   }
 }
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 84; i++) {
     numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
     controllo = comparazione(listaNumeriPc,numeroUtente);
     console.log(controllo);
