@@ -38,10 +38,13 @@ listaBomb.sort();
 console.log(listaBomb);
 i = 0
 while (i < tentativi && chek == false) {
-  do {
+
     numeroUtente = parseInt(prompt("inserisci un numero"));
     range(numeroMinBomb,numeroMaxBomb,numeroUtente)
-  } while (range(numeroMinBomb,numeroMaxBomb,numeroUtente) == false);
+    while (range(numeroMinBomb,numeroMaxBomb,numeroUtente) == false){
+      numeroUtente = parseInt(prompt("inserisci un numero"));
+      range(numeroMinBomb,numeroMaxBomb,numeroUtente)
+    }
     if (isHere (listaNumeriUtente, numeroUtente) == false) {
         listaNumeriUtente.push(numeroUtente);
         console.log("random");
