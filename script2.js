@@ -7,7 +7,11 @@ var chek = false;
 var numeroMinBomb = 1;
 var numeroMaxBomb = 100;
 var messaggio = "hai vinto"
-var difficolta = parseInt(prompt("inserisci una difficolta da 0 a 2"))
+var difficolta = parseInt(prompt("inserisci una difficolta da 0 a 2"));
+
+while (range(0,2,difficolta) == false) {
+  difficolta = parseInt(prompt("inserisci una difficolta da 0 a 2"));
+}
 // creazione difficoltà
 switch (difficolta) {
   case 1:
@@ -71,6 +75,9 @@ alert (messaggio+" "+ punteggio)
 function range(numMin,numMax,num){
   if (num >= numMin && num <=numMax) {
       return true
+    }
+    else {
+      return false
     }
 }
 
