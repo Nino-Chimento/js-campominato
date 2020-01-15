@@ -1,5 +1,6 @@
 var listaBomb=[23,]
 var listaNumeriUtente=[];
+var numeroUtente;
 var punteggio = 0;
 var tentativi = 5;
 var chek = false;
@@ -16,8 +17,11 @@ while (listaBomb.length < 16) {
 console.log(listaBomb);
 i = 0
 while (i < tentativi) {
+  do {
+    numeroUtente = parseInt(prompt("inserisci un numero"))
+  } while (range(numeroMinBomb,numeroMaxBomb,numeroUtente == false));
   i++
-  console.log("random");
+  console.log(numeroUtente);
 }
 
 
