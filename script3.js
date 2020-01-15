@@ -12,7 +12,7 @@ while (listaBomb.length < 16) {
     listaBomb.push(numeroBomb);
   }
 }
-console.log(listaBomb);
+
 // funzioni
 function range(numMin,numMax,num){
   if (num >= numMin && num <=numMax) {
@@ -22,7 +22,12 @@ function range(numMin,numMax,num){
       return false
     }
 }
-
+// inizio giocatore
+document.getElementById("play").addEventListener("click",
+function play() {
+  console.log("n");
+}
+)
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
