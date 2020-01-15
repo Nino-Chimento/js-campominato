@@ -24,7 +24,7 @@ switch (difficolta) {
       tentativi = 34;
       break;
   default:
-
+// fine difficolta
 }
 // creazione lista bombe non ripetute
 while (listaBomb.length < 16) {
