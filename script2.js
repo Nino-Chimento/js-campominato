@@ -3,16 +3,13 @@ var listaNumeriUtente=[];
 var punteggio = 0;
 var tentativi = 5;
 var chek = false;
-
-
-for (var i = 0; i < 8; i++) {
-  listaBomb.push(getRandomInt(1,100))
+var numeroMinBomb = 1;
+var numeroMaxBomb = 100;
+// creazione lista bombe non ripetute
+while (listaBomb.length < 16) {
+  listaBomb.push(numeroMinBomb,numeroMaxBomb)
 }
-
-random = range(1,100,8)
-console.log(random);
-
-
+console.log(listaBomb);
 
 
 
@@ -41,6 +38,7 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
 function chek(array,valore){
   for (var i = 0; i < array.length; i++) {
     if (valore == array[i]) {
