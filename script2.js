@@ -9,8 +9,8 @@ for (var i = 0; i < 8; i++) {
   listaBomb.push(getRandomInt(1,100))
 }
 
-
-
+random = range(1,100,8)
+console.log(random);
 
 
 
@@ -29,6 +29,13 @@ for (var i = 0; i < 8; i++) {
 
 
 // funzioni
+function range(numMin,numMax,num){
+  if (num >= numMin && num <=numMax) {
+      return true
+    }
+}
+
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
