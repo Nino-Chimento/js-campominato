@@ -1,7 +1,18 @@
 var listaBomb=[]
 var listaNumeriUtente;
 var punteggio = 0;
-
+var bomba = false;
+var numeroMinBomb = 1;
+var numeroMaxBomb =100;
+// creazione bombe
+while (listaBomb.length < 16) {
+  numeroBomb= getRandomInt(numeroMinBomb,numeroMaxBomb);
+  controllo = isHere(listaBomb,numeroBomb);
+  if (controllo == false) {
+    listaBomb.push(numeroBomb);
+  }
+}
+console.log(listaBomb);
 // funzioni
 function range(numMin,numMax,num){
   if (num >= numMin && num <=numMax) {
