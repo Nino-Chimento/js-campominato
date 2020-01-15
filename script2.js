@@ -6,6 +6,7 @@ var tentativi = 5;
 var chek = false;
 var numeroMinBomb = 1;
 var numeroMaxBomb = 100;
+var messaggio = "hai vinto"
 // creazione lista bombe non ripetute
 while (listaBomb.length < 16) {
   numeroBomb= getRandomInt(numeroMinBomb,numeroMaxBomb);
@@ -22,11 +23,15 @@ while (i < tentativi && chek == false) {
   } while (range(numeroMinBomb,numeroMaxBomb,numeroUtente == false));
   if (isHere (listaBomb, numeroUtente) == true) {
       chek = true
+      messaggio = "hai perso"
+  }
+  else {
+    punteggio++
   }
   i++
   console.log(numeroUtente);
 }
-
+alert (messaggio+" "+ punteggio)
 
 
 
