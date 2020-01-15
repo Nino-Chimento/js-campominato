@@ -15,12 +15,14 @@ while (listaBomb.length < 16) {
     listaBomb.push(numeroBomb);
   }
 }
+listaBomb.sort();
 console.log(listaBomb);
 i = 0
 while (i < tentativi && chek == false) {
   do {
-    numeroUtente = parseInt(prompt("inserisci un numero"))
-  } while (range(numeroMinBomb,numeroMaxBomb,numeroUtente == false));
+    numeroUtente = parseInt(prompt("inserisci un numero"));
+    range(numeroMinBomb,numeroMaxBomb,numeroUtente)
+  } while (range(numeroMinBomb,numeroMaxBomb,numeroUtente) == false);
     if (isHere (listaNumeriUtente, numeroUtente) == false) {
         listaNumeriUtente.push(numeroUtente);
         console.log("random");
