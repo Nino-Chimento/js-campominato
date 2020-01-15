@@ -7,6 +7,7 @@ var controllo;
 var possibilita = 0;
 var numeroUtente;
 var listaNumeriPc =[23,];
+var listaNumeriUsciti =[];
 // creazione nuermi random
 if (difficolta == 0) {
   for (var i = 0; i <16; i++) {
@@ -18,6 +19,13 @@ if (difficolta == 0) {
         numeroUtente = parseInt(prompt("inserisci un numero comrpeso da 1 a 100"));
         while (numeroUtente < 1 || numeroUtente > 100) {
           numeroUtente = parseInt(prompt("devi inserire un numero da 1 a 100"))
+        }
+        listaNumeriUsciti.push(numeroUtente);
+        controlloNumeroUscito = comparazione(listaNumeriUsciti,numeroUtente);
+        console.log(controlloNumeroUscito);
+        while (controlloNumeroUscito == false) {
+            numeroUtente = parseInt(prompt("devi inserire un numero non inserito"));
+            controlloNumeroUscito = comparazione(listaNumeriUsciti,numeroUtente);
         }
         controllo = comparazione(listaNumeriPc,numeroUtente);
         console.log(controllo);
