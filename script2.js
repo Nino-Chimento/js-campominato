@@ -7,7 +7,11 @@ var numeroMinBomb = 1;
 var numeroMaxBomb = 100;
 // creazione lista bombe non ripetute
 while (listaBomb.length < 16) {
-  listaBomb.push(numeroMinBomb,numeroMaxBomb)
+  numeroBomb= getRandomInt(numeroMinBomb,numeroMaxBomb);
+  controllo = isHere(listaBomb,numeroBomb);
+  if (controllo == false) {
+    listaBomb.push(numeroBomb);
+  }
 }
 console.log(listaBomb);
 
@@ -39,10 +43,14 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function chek(array,valore){
-  for (var i = 0; i < array.length; i++) {
-    if (valore == array[i]) {
-        return true;
+function isHere (array, element) {
+  var i = 0;
+  var result = false;
+  while (i < array.length && result == false) {
+    if (array[i] == element) {
+      result = true;
     }
+    i++;
   }
+  return result;
 }
