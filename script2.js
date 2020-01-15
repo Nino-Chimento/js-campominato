@@ -20,6 +20,9 @@ while (i < tentativi) {
   do {
     numeroUtente = parseInt(prompt("inserisci un numero"))
   } while (range(numeroMinBomb,numeroMaxBomb,numeroUtente == false));
+  if (isHere (listaBomb, numeroUtente) == true) {
+      alert("hai perso")
+  }
   i++
   console.log(numeroUtente);
 }
