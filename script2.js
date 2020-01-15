@@ -7,6 +7,21 @@ var chek = false;
 var numeroMinBomb = 1;
 var numeroMaxBomb = 100;
 var messaggio = "hai vinto"
+var difficolta = parseInt(prompt("inserisci una difficolta da 0 a 2"))
+// creazione difficoltà
+switch (difficolta) {
+  case 1:
+    numeroMaxBomb = 80;
+    tentativi = 64
+    console.log(tentativi);
+    break;
+    case 2:
+      numeroMaxBomb = 50;
+      tentativi = 34;
+      break;
+  default:
+
+}
 // creazione lista bombe non ripetute
 while (listaBomb.length < 16) {
   numeroBomb= getRandomInt(numeroMinBomb,numeroMaxBomb);
