@@ -52,7 +52,7 @@ while (i < tentativi && chek == false) {
     }
     if (isHere (listaNumeriUtente, numeroUtente) == false) {
         listaNumeriUtente.push(numeroUtente);
-        console.log("random");
+
         if (isHere (listaBomb, numeroUtente) == true) {
             chek = true
             messaggio = "hai perso"
@@ -61,9 +61,9 @@ while (i < tentativi && chek == false) {
           punteggio++
         }
         i++
-        console.log(numeroUtente);
       }
     }
+
 
 alert (messaggio+" "+ punteggio)
 
