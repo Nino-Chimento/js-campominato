@@ -13,6 +13,29 @@ h1 {
   height: 60%;
   display: flex;
   flex-wrap: wrap;
-  background-color: red;
+
   margin: auto;
+}
+.container > div {
+  width: 9%;
+  height: 10%;
+  background-color: lightgrey;
+  border: 1px solid black;
+}
+input {
+  margin: auto;
+  margin-top: 20px;
+  height: 30px;
+}
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+#play {
+  margin: auto;
+  width: 15%;
+  text-align: center;
+  cursor: pointer;
 }
