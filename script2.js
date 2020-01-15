@@ -42,8 +42,13 @@ while (i < tentativi && chek == false) {
     numeroUtente = parseInt(prompt("inserisci un numero"));
     range(numeroMinBomb,numeroMaxBomb,numeroUtente)
     while (range(numeroMinBomb,numeroMaxBomb,numeroUtente) == false){
+      alert("inserisci un numero da 1 a"+numeroMaxBomb)
       numeroUtente = parseInt(prompt("inserisci un numero"));
       range(numeroMinBomb,numeroMaxBomb,numeroUtente)
+    }
+    while (isHere (listaNumeriUtente, numeroUtente) == true) {
+        alert("hai gia inserito questo numero")
+        numeroUtente = parseInt(prompt("inserisci un numero"));
     }
     if (isHere (listaNumeriUtente, numeroUtente) == false) {
         listaNumeriUtente.push(numeroUtente);
@@ -61,8 +66,6 @@ while (i < tentativi && chek == false) {
     }
 
 alert (messaggio+" "+ punteggio)
-
-
 
 
 
