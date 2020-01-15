@@ -14,7 +14,11 @@ while (listaBomb.length < 16) {
   }
 }
 console.log(listaBomb);
-
+i = 0
+while (i < tentativi) {
+  i++
+  console.log("random");
+}
 
 
 
