@@ -16,12 +16,12 @@ while (listaBomb.length < 16) {
 }
 console.log(listaBomb);
 i = 0
-while (i < tentativi) {
+while (i < tentativi && chek == false) {
   do {
     numeroUtente = parseInt(prompt("inserisci un numero"))
   } while (range(numeroMinBomb,numeroMaxBomb,numeroUtente == false));
   if (isHere (listaBomb, numeroUtente) == true) {
-      alert("hai perso")
+      chek = true
   }
   i++
   console.log(numeroUtente);
