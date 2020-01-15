@@ -21,16 +21,21 @@ while (i < tentativi && chek == false) {
   do {
     numeroUtente = parseInt(prompt("inserisci un numero"))
   } while (range(numeroMinBomb,numeroMaxBomb,numeroUtente == false));
-  if (isHere (listaBomb, numeroUtente) == true) {
-      chek = true
-      messaggio = "hai perso"
-  }
-  else {
-    punteggio++
-  }
-  i++
-  console.log(numeroUtente);
-}
+    if (isHere (listaNumeriUtente, numeroUtente) == false) {
+        listaNumeriUtente.push(numeroUtente);
+        console.log("random");
+        if (isHere (listaBomb, numeroUtente) == true) {
+            chek = true
+            messaggio = "hai perso"
+        }
+        else {
+          punteggio++
+        }
+        i++
+        console.log(numeroUtente);
+      }
+    }
+
 alert (messaggio+" "+ punteggio)
 
 
