@@ -21,12 +21,13 @@ $("button").click(
   function play() {
 
       numeroUtente=document.getElementById("numero").value;
-      if (isHere (listaNumeriUtente, numeroUtente) == true) {
+
+
+
+      if (isHere (listaNumeriUtente, numeroUtente) == true || range(numeroMinBomb,numeroMaxBomb,numeroUtente) == false) {
         alert("hai gia inserito questo numero")
       }
-      listaNumeriUtente.push(numeroUtente);
-      console.log(listaNumeriUtente);
-      if (isHere (listaBomb, numeroUtente)) {
+      else if (isHere (listaBomb, numeroUtente)) {
         casellaDaColorare = "cella"+numeroUtente;
         document.getElementById(casellaDaColorare).classList.add("red");
         alert("hai perso");
@@ -42,7 +43,8 @@ $("button").click(
         punteggio++
         $("span").text(punteggio)
         var casellaDaColorare = "cella"+numeroUtente;
-        document.getElementById(casellaDaColorare).classList.add("green")
+        document.getElementById(casellaDaColorare).classList.add("green");
+        listaNumeriUtente.push(numeroUtente);
       }
     }
   )
