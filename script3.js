@@ -1,9 +1,11 @@
 var listaBomb=[]
-var listaNumeriUtente;
+var listaNumeriUtente =[];
 var punteggio = 0;
 var bomba = false;
 var numeroMinBomb = 1;
 var numeroMaxBomb =100;
+var numeroUtente;
+var tentativi = 84;
 // creazione bombe
 while (listaBomb.length < 16) {
   numeroBomb= getRandomInt(numeroMinBomb,numeroMaxBomb);
@@ -12,6 +14,38 @@ while (listaBomb.length < 16) {
     listaBomb.push(numeroBomb);
   }
 }
+console.log(listaBomb);
+console.log($(".cella1"));
+// inizio giocatore
+$("button").click(
+  function play() {
+
+      numeroUtente=document.getElementById("numero").value;
+      if (isHere (listaNumeriUtente, numeroUtente) == true) {
+        alert("hai gia inserito questo numero")
+      }
+      listaNumeriUtente.push(numeroUtente);
+      console.log(listaNumeriUtente);
+      if (isHere (listaBomb, numeroUtente)) {
+        alert("hai perso");
+      }
+      else {
+        punteggio++
+        $("span").text(punteggio)
+      }
+
+
+    }
+)
+
+
+
+
+
+
+
+
+
 
 // funzioni
 function range(numMin,numMax,num){
@@ -22,12 +56,6 @@ function range(numMin,numMax,num){
       return false
     }
 }
-// inizio giocatore
-document.getElementById("play").addEventListener("click",
-function play() {
-  console.log("n");
-}
-)
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
