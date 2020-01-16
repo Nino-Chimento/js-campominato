@@ -32,11 +32,13 @@ $("button").click(
       else {
         punteggio++
         $("span").text(punteggio)
+        var casellaDaColorare = "cella"+numeroUtente;
+        document.getElementById(casellaDaColorare).classList.add("green")
       }
-
-
     }
-)
+  )
+
+
 
 
 
