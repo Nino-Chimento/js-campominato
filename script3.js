@@ -30,7 +30,10 @@ $("button").click(
         casellaDaColorare = "cella"+numeroUtente;
         document.getElementById(casellaDaColorare).classList.add("red");
         alert("hai perso");
-
+        for (var i = 0; i < listaBomb.length; i++) {
+          caselleALtreBombe = "cella"+listaBomb[i];
+          document.getElementById(caselleALtreBombe).classList.add("red");
+        }
       }
       else if (punteggio == 84) {
         alert("hai vinto")
