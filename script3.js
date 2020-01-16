@@ -27,7 +27,13 @@ $("button").click(
       listaNumeriUtente.push(numeroUtente);
       console.log(listaNumeriUtente);
       if (isHere (listaBomb, numeroUtente)) {
+        casellaDaColorare = "cella"+numeroUtente;
+        document.getElementById(casellaDaColorare).classList.add("red");
         alert("hai perso");
+
+      }
+      else if (punteggio == 84) {
+        alert("hai vinto")
       }
       else {
         punteggio++
