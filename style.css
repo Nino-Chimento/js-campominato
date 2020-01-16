@@ -19,8 +19,11 @@ h1 {
 .container > div {
   width: 9%;
   height: 10%;
-  background-color: lightgrey;
+
   border: 1px solid black;
+}
+.grey{
+  background-color: lightgrey;
 }
 input {
   margin: auto;
