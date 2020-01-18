@@ -15,7 +15,7 @@ while (listaBomb.length < 16) {
   }
 }
 console.log(listaBomb);
-console.log($(".cella1"));
+
 // inizio giocatore
 $("button").click(
   function play() {
@@ -50,7 +50,23 @@ $("button").click(
   )
   $(".container > div").click(
     function(){
-      console.log($(this).index());
+      var numeroUtente =$(this).index();
+      if (isHere (listaBomb, numeroUtente) == true) {
+          casellaDaColorare = "cella"+numeroUtente;
+          document.getElementById(casellaDaColorare).classList.add("red");
+          alert("hai perso");
+          for (var i = 0; i < listaBomb.length; i++) {
+            caselleALtreBombe = "cella"+listaBomb[i];
+            document.getElementById(caselleALtreBombe).classList.add("red");
+          }
+      }
+      else {
+        punteggio++
+        $("span").text(punteggio);
+        var casellaDaColorare = "cella"+numeroUtente;
+        document.getElementById(casellaDaColorare).classList.add("green");
+        listaNumeriUtente.push(numeroUtente);
+      }
     }
   );
 
