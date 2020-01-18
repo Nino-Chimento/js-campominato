@@ -48,6 +48,12 @@ $("button").click(
       }
     }
   )
+  $(".container > div").click(
+    function(){
+      console.log($(this).index());
+    }
+  );
+
 
 
 
